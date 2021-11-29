@@ -21,12 +21,12 @@ export class DatatableComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength: 3,
+      pageLength: 5,
       language: {
         url: '//cdn.datatables.net/plug-ins/1.11.3/i18n/es-cl.json'
       }
     };
-    this.httpClient.get('https://reqres.in/api/users').pipe(
+    this.httpClient.get('https://dummy.restapiexample.com/api/v1/employees').pipe(
       map( (resp: any) => {
         return resp.data;
       })
