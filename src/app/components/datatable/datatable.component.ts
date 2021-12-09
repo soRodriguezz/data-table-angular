@@ -15,6 +15,7 @@ export class DatatableComponent implements OnInit, OnDestroy {
   dtOptions: DataTables.Settings = {};
   personas: any = [];
 
+
   dtTrigger =new Subject();
 
   constructor( private httpClient: HttpClient ) { }
@@ -43,7 +44,6 @@ export class DatatableComponent implements OnInit, OnDestroy {
         icon: 'error',
         title: error.error.message 
       });
-
     });
   }
 
